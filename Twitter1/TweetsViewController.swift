@@ -34,7 +34,6 @@ class TweetsViewController: UIViewController, UITableViewDataSource {
         cell.ProfileImage.setImageWithURL(NSURL(string: thisUser.profileImageUrl!))
         cell.TagLabel.text = "@" + thisUser.screenname! as String
         cell.HourLabel.text = thisTweet.time!
-        
         /*
         let url = NSURL(string: thisUser.profileImageUrl!)
         if let data = NSData(contentsOfURL: url!){
@@ -46,8 +45,8 @@ class TweetsViewController: UIViewController, UITableViewDataSource {
         }
         */
         
-        
-        
+        cell.ProfileImage.tag = indexPath.row
+
         var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "onImageTap:")
         
         // var location = tapGestureRecognizer.locationInView(self.trayView)
@@ -64,9 +63,10 @@ class TweetsViewController: UIViewController, UITableViewDataSource {
     
     func onImageTap(tapGestureRecognizer: UITapGestureRecognizer) {
 
-        var point = tapGestureRecognizer.locationInView(view)
+       // var point = tapGestureRecognizer.locationInView(view)
         print ("Image tapped here")
         //goToProfile(self.)
+         print (tapGestureRecognizer.view?.tag)
 
         performSegueWithIdentifier("imageSegue", sender: tapGestureRecognizer.view?.tag)
 
@@ -120,13 +120,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         print(segue.identifier)
-        if (segue.identifier != "detailsSegue"){
-            
-            let user = self.tweets![sender as! Int].user
-            let tweetUserViewController = segue.destinationViewController as! TweetUserViewController
-            tweetUserViewController.currentUser = user
-
-        } else {
+        if (segue.identifier == "detailsSegue"){
             let cell = sender as! TwitterCell
             let indexPath = tableView.indexPathForCell(cell)
             let tweet = self.tweets![indexPath!.row]
@@ -136,7 +130,19 @@ class TweetsViewController: UIViewController, UITableViewDataSource {
             
             detailsViewController.currentTweet = tweet
             
-        }
+            
+            
+        } else if (segue.identifier == "imageSegue") {
+            let user = self.tweets![sender as! Int].user
+            print (user)
+            let tweetUserViewController = segue.destinationViewController as! TweetUserViewController
+            tweetUserViewController.currentUser = user
+
+            
+        } else
+        
+        {
+                    }
     }
     
     override func awakeFromNib() {
