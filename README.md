@@ -30,4 +30,4 @@ Time spent: `12 hours`
 
 ### Walkthrough
 
-![Video Walkthrough]()
+![Video Walkthrough](twitter2_gif.gif)
