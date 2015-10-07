@@ -21,9 +21,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var delegate: MenuViewControllerDelegate?
     
-
-    
-    let menuItems: NSArray = ["Profile", "Home", "Mentions"]
+    let menuItems: NSArray = ["Profile", "Home", "Mentions", "Log Out"]
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
@@ -41,16 +39,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("inside didSelectRowAtIndexPath")
-        //cellSelected(menuItems[indexPath.row] as! NSString)
+        print(menuItems[indexPath.row] as! NSString)
+        print(delegate)
         delegate?.cellSelected(menuItems[indexPath.row] as! NSString)
-        
-        
         print(menuItems[indexPath.row])
     }
-    
 
     
     override func viewDidLoad() {
@@ -59,7 +54,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.userImage.setImageWithURL(NSURL(string: User.currentUser!.profileImageUrl!))
         self.userTag.text = "@" + User.currentUser!.screenname! as String
         menuTableView.delegate = self
-
     }
     
 
@@ -67,13 +61,11 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
 }
 
 
 class MenuCell:UITableViewCell{
-    
     @IBOutlet weak var menuLabel: UILabel!
 }
 

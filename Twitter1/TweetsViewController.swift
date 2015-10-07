@@ -62,14 +62,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource {
     
     
     func onImageTap(tapGestureRecognizer: UITapGestureRecognizer) {
-
        // var point = tapGestureRecognizer.locationInView(view)
         print ("Image tapped here")
         //goToProfile(self.)
-         print (tapGestureRecognizer.view?.tag)
-
+        print (tapGestureRecognizer.view?.tag)
         performSegueWithIdentifier("imageSegue", sender: tapGestureRecognizer.view?.tag)
-
     }
 
     
@@ -130,14 +127,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource {
             
             detailsViewController.currentTweet = tweet
             
-            
-            
         } else if (segue.identifier == "imageSegue") {
             let user = self.tweets![sender as! Int].user
             print (user)
             let tweetUserViewController = segue.destinationViewController as! TweetUserViewController
             tweetUserViewController.currentUser = user
-
             
         } else
         
@@ -153,15 +147,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource {
 
 
 class TwitterCell:UITableViewCell{
-
-    
     @IBOutlet weak var ProfileImage: UIImageView!
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var TweetLabel: UILabel!
     @IBOutlet weak var HourLabel: UILabel!
     @IBOutlet weak var TagLabel: UILabel!
-    
-    
 }
 
 

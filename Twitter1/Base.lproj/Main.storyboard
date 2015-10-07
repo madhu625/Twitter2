@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Twitter1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Twitter1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181.33333333333334" y="335.59333333333331"/>
+            <point key="canvasLocation" x="-354" y="61"/>
         </scene>
         <!--Home-->
         <scene sceneID="f4C-wb-NO8">
@@ -156,7 +156,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yuw-mb-abY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="TyP-PJ-bnX">
                     <connections>
-                        <segue destination="q6L-ol-xUo" kind="modal" identifier="imageSegue" id="qTf-gm-NmN"/>
+                        <segue destination="q6L-ol-xUo" kind="modal" identifier="imageSegue" id="CiC-IZ-19h"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -186,13 +186,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="feedView" destination="W8I-VS-PuK" id="VvQ-WP-JTP"/>
+                        <outlet property="feedView" destination="W8I-VS-PuK" id="bge-Np-KDr"/>
                         <outlet property="menuView" destination="QVt-yJ-O5l" id="PUw-e6-wQH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bN-cF-sus" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="181" y="1060"/>
+            <point key="canvasLocation" x="109" y="61"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="dSh-o2-O04">
@@ -261,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9b-Bn-4Oy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="1060"/>
+            <point key="canvasLocation" x="-354" y="735"/>
         </scene>
         <!--Title-->
         <scene sceneID="dSq-LW-rlx">
@@ -396,7 +396,7 @@
         <!--Tweet User View Controller-->
         <scene sceneID="rgk-G2-HPZ">
             <objects>
-                <viewController id="q6L-ol-xUo" customClass="TweetUserViewController" customModule="Twitter1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TweetUserViewController" id="q6L-ol-xUo" customClass="TweetUserViewController" customModule="Twitter1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YZz-y8-873"/>
                         <viewControllerLayoutGuide type="bottom" id="kfy-lq-Jjm"/>
@@ -418,7 +418,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTa-V7-ZWk">
-                                <rect key="frame" x="20" y="263" width="55" height="21"/>
+                                <rect key="frame" x="20" y="261" width="55" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -444,11 +444,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TweetScreenName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IP9-QH-p75">
                                 <rect key="frame" x="82" y="195" width="145" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpw-U8-JQU">
-                                <rect key="frame" x="109" y="262" width="73" height="21"/>
+                                <rect key="frame" x="109" y="260" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -466,7 +466,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGB-Hy-hQq">
-                                <rect key="frame" x="232" y="232" width="57" height="21"/>
+                                <rect key="frame" x="232" y="236" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -475,11 +475,12 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="128"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7o-Mf-uw8">
-                                <rect key="frame" x="-1" y="142" width="76" height="74"/>
+                                <rect key="frame" x="14" y="147" width="66" height="69"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7H7-PG-zlR"/>
                     <connections>
                         <outlet property="FollowingCount" destination="rQT-NR-Aby" id="RTH-22-wsc"/>
                         <outlet property="FriendsCount" destination="AGB-Hy-hQq" id="UBU-fN-d2t"/>
@@ -493,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWu-85-Hc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370" y="1060"/>
+            <point key="canvasLocation" x="1784" y="1060"/>
         </scene>
         <!--Compose Tweet-->
         <scene sceneID="zoq-Lf-YW9">
